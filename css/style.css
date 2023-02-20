@@ -1,0 +1,144 @@
+body{
+    background-color: black;
+    color: white;
+    /* height: 2500px; */
+}
+
+/* ********************** Header ********************** */
+header{
+    background-image: url("../media/william-bayreuther-hfk6xOjQlFk-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    padding-top:10px;
+}
+/* القائمة الرئيسية */
+
+.mainNav{
+    display: flex;
+    justify-content:  space-between;
+
+}
+.brand{
+    flex-grow: 1;               /* لأخد مساحة متساوية مع العناصر*/
+}
+#Check,
+.dropMenuBtn{
+    display: none;
+}
+.allMenu{
+    display: flex;
+    flex-grow: 1;
+}
+.menu{
+    display: flex;
+    flex-grow: 1;               /* لأخد مساحة متساوية */
+}
+.item{
+    display:block;
+    color: white;
+    padding: .6em;
+    text-transform: Uppercase;  /* لجعل جميع الأحرف كبيرة */
+}
+.item:hover{
+    color: black;
+    background-color: white;
+}
+.joinBtn{
+    color: white;
+    border: 1px solid;
+    padding: 0 .5em;
+    display: inherit;           /* لإستخدام الخاصية التي أسفلها */
+    align-items: center; 
+}
+.joinBtn:hover{
+    color: black;
+    border-color: white;
+    background-color: white;
+}
+
+/* القائمة الثانية */
+.secNav{
+    position: relative;
+    top: calc(100vh - 9.7em);
+}
+.menu2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    /* توسيط العنصر */
+}
+.item2{
+    display: block;
+    text-align: center;     /* توسيط العنصر */
+    color: white;
+    text-transform: uppercase;
+    width: 48vw;
+    height: 6em;
+    padding-top: 1.8em;
+    background-color: rgba(0, 0, 0, 0.555) ;
+}
+.item2:hover{
+    background-color: rgba(239, 245, 230, 0.151);
+}
+
+/* ********************** Portfolio ********************** */
+h1{
+    font-size: 4em;
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap; /* لتحرير العناصر الفائضة */
+    gap: .5em; /* المسافة بين العناصر */
+}
+.gallery li{
+    height: 17em;
+    flex-grow: 1; /* لأخد مساحة متساوية */
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* أسلوب التحجيم */
+    cursor: zoom-in;
+    filter: grayscale(100%)
+}
+.gallery img:hover{
+    filter: none
+}
+
+/************************************************************************/
+/*****************************MEDIA QUERIES******************************/
+/************************************************************************/
+
+/* (تصميم للشاشات الصغيرة (الهواتف */
+
+@media (max-width: 667px){
+    /* *********** header *********** */
+    .allMenu{
+        display: none;
+    }
+    .dropMenuBtn{
+        display: block;
+        cursor: pointer;
+        color: black;
+        padding: 0 1em;
+        border-radius: 50%;
+        background-color: white;
+    }
+    #Check:checked ~ .allMenu{
+        display: block;
+        position: absolute;
+        top: 3.3em;
+        width: 90%;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .joinBtn{
+        padding: .5em 3.1em;
+        width: 11.4em;
+        align-items: center;
+    }
+    .secNav{
+        top: calc(100vh - 8.9em);
+    }
+}
