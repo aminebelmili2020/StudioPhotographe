@@ -1,7 +1,6 @@
 body{
     background-color: black;
     color: white;
-    height: 2500px;
 }
 
 /* ********************** Header ********************** */
@@ -108,7 +107,9 @@ h1{
 }
 
     /* *********** Team *********** */
-
+.team{
+    padding-bottom: 3em;
+}
 .teamMembers{
     display: flex;
     justify-content: center;
@@ -136,6 +137,26 @@ h1{
 
 }
 h6{font-weight: 300;}
+
+
+    /* *********** About *********** */
+
+.about{
+    color: black;
+    background-color: white;
+    box-shadow: inset 0px 26px 30px rgba(0, 0, 0, 0.3);
+    padding-bottom: 3em;
+}
+
+    /* *********** Footer *********** */
+
+footer{
+    padding: 1em;
+    text-align: center;
+}
+
+
+
 
 
 /************************************************************************/
@@ -173,6 +194,11 @@ h6{font-weight: 300;}
     }
     .secNav{
         top: calc(100vh - 8.9em);
+    }
+
+    /* *********** Team *********** */
+    .teamMembers{
+        flex-direction: column;
     }
 }
 
